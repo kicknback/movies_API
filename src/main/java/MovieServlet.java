@@ -15,6 +15,8 @@ public class MovieServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("application/json");
         try {
+
+            // Eventually get movies from database
             PrintWriter out = response.getWriter();
             Movie movie = new Movie(
                     6,
@@ -37,14 +39,28 @@ public class MovieServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("application/json");
+        PrintWriter out = null;
         try {
-            BufferedReader reader = request.getReader();
-
+            out = response.getWriter();
             Movie[] movies = new Gson().fromJson(request.getReader(), Movie[].class);
-            System.out.println(Arrays.toString(movies));
+            for (Movie movie : movies) {
+                System.out.println(movie.getId());
+                System.out.println(movie.getTitle());
+                System.out.println(movie.getDirector());
+                System.out.println(movie.getPlot());
+                System.out.println(movie.getPoster());
+                System.out.println(movie.getActors());
+                System.out.println(movie.getGenre());
+                System.out.println(movie.getYear());
+                System.out.println(movie.getRating());
+                System.out.println("========================================================");
+            }
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        out.println(new Gson().toJson("{message: \"Movies POST was successful\"}"));
+        response.setStatus(200);
     }
 
 }
