@@ -1,11 +1,12 @@
 import com.google.gson.Gson;
 import data.Movie;
-
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.PrintWriter;
+import java.util.Arrays;
 
 @WebServlet(name = "MovieServlet", urlPatterns = "/movies")
 public class MovieServlet extends HttpServlet {
@@ -28,6 +29,19 @@ public class MovieServlet extends HttpServlet {
             );
             String movieString = new Gson().toJson(movie);
             out.println(movieString);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+        response.setContentType("application/json");
+        try {
+            BufferedReader reader = request.getReader();
+
+            Movie[] movies = new Gson().fromJson(request.getReader(), Movie[].class);
+            System.out.println(Arrays.toString(movies));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
