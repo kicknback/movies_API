@@ -1,5 +1,8 @@
 import com.google.gson.Gson;
+import data.DaoFactory;
 import data.Movie;
+import data.MoviesDao;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,18 +21,22 @@ public class MovieServlet extends HttpServlet {
 
             // Eventually get movies from database
             PrintWriter out = response.getWriter();
-            Movie movie = new Movie(
-                    6,
-                    "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-                    "Goodfellas",
-                    "5",
-                    "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
-                    "Martin Scorsese",
-                    "Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco",
-                    "Biography, Crime, Drama",
-                    "1990"
-            );
-            String movieString = new Gson().toJson(movie);
+//            Movie movie = new Movie(
+//                    6,
+//                    "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+//                    "Goodfellas",
+//                    "5",
+//                    "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+//                    "Martin Scorsese",
+//                    "Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco",
+//                    "Biography, Crime, Drama",
+//                    "1990"
+//            );
+
+            MoviesDao moviesDao = DaoFactory.getMoviesDao(DaoFactory.ImplType.IN_MEMORY);
+
+
+            String movieString = new Gson().toJson(moviesDao.all());
             out.println(movieString);
         } catch (Exception e) {
             System.out.println(e.getMessage());

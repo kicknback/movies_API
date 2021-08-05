@@ -1,0 +1,246 @@
+{
+  "movies": [
+    {
+      "id": 6,
+      "poster": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "title": "Goodfellas",
+      "rating": "5",
+      "plot": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+      "director": "Martin Scorsese",
+      "actors": "Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco",
+      "genre": "Biography, Crime, Drama",
+      "year": "1990"
+    },
+    {
+      "id": 7,
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTc5OTk4MTM3M15BMl5BanBnXkFtZTgwODcxNjg3MDE@._V1_SX300.jpg",
+      "title": "Edge of Tomorrow",
+      "rating": "5",
+      "plot": "A soldier fighting aliens gets to relive the same day over and over again, the day restarting every time he dies.",
+      "director": "Doug Liman",
+      "actors": "Tom Cruise, Emily Blunt, Brendan Gleeson, Bill Paxton",
+      "genre": "Action, Adventure, Sci-Fi",
+      "year": "2014"
+    },
+    {
+      "id": 9,
+      "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "title": "The Godfather",
+      "rating": "5",
+      "plot": "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
+      "director": "Francis Ford Coppola",
+      "actors": "Marlon Brando, Al Pacino, James Caan, Richard S. Castellano",
+      "genre": "Crime, Drama",
+      "year": "1972"
+    },
+    {
+      "title": "Scorpio",
+      "rating": "",
+      "actors": "Burt Lancaster, Alain Delon, Paul Scofield",
+      "director": "Michael Winner",
+      "genre": "Action, Drama, Thriller",
+      "plot": "During the Cold War, the CIA orders free-lance operative Scorpio to assassinate his former CIA mentor Cross and a deadly cat-and-mouse game ensues.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMzM4ZTI0ZmItY2VjZi00MzI4LTlhYTAtYjg2NzJlNGE1N2U0XkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg",
+      "year": "1973",
+      "id": 10
+    },
+    {
+      "title": "Pootie Tang",
+      "rating": "",
+      "actors": "Lance Crouther, J.B. Smoove, Jennifer Coolidge, Reg E. Cathey",
+      "director": "Louis C.K.",
+      "genre": "Action, Adventure, Comedy, Musical",
+      "plot": "\"The Man\" is baffled by a chill hero's invincible weapon: gibberish.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWY2ZGU3ZDAtN2NhMy00NjRjLWE5ZDgtZTRlM2QxMTBjZWYwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "year": "2001",
+      "id": 17
+    },
+    {
+      "title": "Bee Movie",
+      "rating": "",
+      "actors": "Jerry Seinfeld, Renée Zellweger, Matthew Broderick",
+      "director": "Simon J. Smith, Steve Hickner",
+      "genre": "Animation, Adventure, Comedy",
+      "plot": "Barry B. Benson, a bee just graduated from college, is disillusioned at his lone career choice: making honey. On a special trip outside the hive, Barry's life is saved by Vanessa, a florist in New York City. As their relationship blo",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjE1MDYxOTA4MF5BMl5BanBnXkFtZTcwMDE0MDUzMw@@._V1_SX300.jpg",
+      "year": "2007",
+      "id": 18
+    },
+    {
+      "title": "Casino",
+      "rating": "5",
+      "actors": "Robert De Niro, Sharon Stone, Joe Pesci, James Woods",
+      "director": "Martin Scorsese",
+      "genre": "Crime, Drama",
+      "plot": "A tale of greed, deception, money, power, and murder occur between two best friends: a mafia enforcer and a casino executive compete against each other over a gambling empire, and over a fast-living and fast-loving socialite.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTcxOWYzNDYtYmM4YS00N2NkLTk0NTAtNjg1ODgwZjAxYzI3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg",
+      "year": "1995",
+      "id": 19
+    },
+    {
+      "title": "Total Recall",
+      "rating": "",
+      "actors": "Arnold Schwarzenegger, Sharon Stone, Michael Ironside",
+      "director": "Paul Verhoeven",
+      "genre": "Action, Sci-Fi, Thriller",
+      "plot": "When a man goes in to have virtual vacation memories of the planet Mars implanted in his mind, an unexpected and harrowing series of events forces him to go to the planet for real - or is he?",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYzU1YmJjMGEtMjY4Yy00MTFlLWE3NTUtNzI3YjkwZTMxZjZmXkEyXkFqcGdeQXVyNDc2NjEyMw@@._V1_SX300.jpg",
+      "year": "1990",
+      "id": 20
+    },
+    {
+      "title": "Avatar",
+      "rating": "",
+      "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+      "director": "James Cameron",
+      "genre": "Action, Adventure, Fantasy, Sci-Fi",
+      "plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+      "year": "2009",
+      "id": 21
+    },
+    {
+      "title": "Layer Cake",
+      "rating": "",
+      "actors": "Daniel Craig, Tom Hardy, Jamie Foreman, Sally Hawkins",
+      "director": "Matthew Vaughn",
+      "genre": "Action, Crime, Drama, Thriller",
+      "plot": "A successful cocaine dealer gets two tough assignments from his boss on the eve of his planned early retirement.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTI5MTE1OTAzOV5BMl5BanBnXkFtZTcwNDc2OTgyMQ@@._V1_SX300.jpg",
+      "year": "2004",
+      "id": 22
+    },
+    {
+      "title": "Death to Smoochy",
+      "rating": "",
+      "actors": "Robin Williams, Edward Norton, Catherine Keener, Danny DeVito",
+      "director": "Danny DeVito",
+      "genre": "Comedy, Crime, Drama, Thriller",
+      "plot": "A kids show host, Rainbow Randolph, is fired in disgrace while his replacement, Sheldon Mopes, aka Smoochy the Rhino, finds himself a rising star. Unfortunately for Sheldon, the business of kids television isn't all child's play.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzlmZTQ1YzUtOGZjMi00YmVhLTg0ZDQtMmUyMjVlZDZhOTIwXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg",
+      "year": "2002",
+      "id": 23
+    },
+    {
+      "title": "Saving Private Ryan",
+      "rating": "",
+      "actors": "Tom Hanks, Tom Sizemore, Edward Burns, Barry Pepper",
+      "director": "Steven Spielberg",
+      "genre": "Drama, War",
+      "plot": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SX300.jpg",
+      "year": "1998",
+      "id": 24
+    },
+    {
+      "title": "All Dogs Go to Heaven",
+      "rating": "",
+      "actors": "Dom DeLuise, Burt Reynolds, Daryl Gilley, Candy Devine",
+      "director": "Don Bluth, Gary Goldman(co-director), Dan Kuenster(co-director)",
+      "genre": "Animation, Comedy, Drama, Family, Fantasy, Musical",
+      "plot": "A canine angel, Charlie, sneaks back to earth from heaven but ends up befriending an orphan girl who can speak to animals. In the process, Charlie learns that friendship is the most heavenly gift of all.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTI4ZWRmNTAtOWIyZC00Njk0LWIzZGItYjE0NDVlM2Q4ZWJjXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg",
+      "year": "1989",
+      "id": 25
+    },
+    {
+      "title": "Forgotten",
+      "rating": "",
+      "actors": "Paul McGann, Amanda Burton, Zara Turner, Karis Copp",
+      "director": "N/A",
+      "genre": "Thriller, Crime",
+      "plot": "Ben Turner is living an idyllic life in the sleepy English countryside. Happily married and father to a six-year-old daughter, things couldn't be better until a dark reminder from his past turns up in the morning mail.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTQ3MDcxNDAyMl5BMl5BanBnXkFtZTcwNTc5ODYxMQ@@._V1_SX300.jpg",
+      "year": "1999–",
+      "id": 26
+    },
+    {
+      "title": "The Breakfast Club",
+      "rating": "",
+      "actors": "Emilio Estevez, Judd Nelson, Molly Ringwald",
+      "director": "John Hughes",
+      "genre": "Comedy, Drama",
+      "plot": "Five high school students meet in Saturday detention and discover how they have a lot more in common than they thought.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BOTM5N2ZmZTMtNjlmOS00YzlkLTk3YjEtNTU1ZmQ5OTdhODZhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "year": "1985",
+      "id": 27
+    },
+    {
+      "title": "Avengers",
+      "rating": "",
+      "actors": "Linda Ballantyne, Tony Daniels, Ron Rubin",
+      "director": "N/A",
+      "genre": "Animation, Action, Adventure",
+      "plot": "The adventures of the Marvel Comics Universe's greatest general membership superhero team.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDg0MzM1MWQtMDI3ZC00NDY4LTk4MjYtMjdjNDZlNzk3MTY5XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg",
+      "year": "1999–2000",
+      "id": 28
+    },
+    {
+      "title": "Avengers: Infinity War",
+      "rating": "",
+      "actors": "Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans",
+      "director": "Anthony Russo, Joe Russo",
+      "genre": "Action, Adventure, Sci-Fi",
+      "plot": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg",
+      "year": "2018",
+      "id": 29
+    },
+    {
+      "title": "Hannibal",
+      "rating": "",
+      "actors": "Anthony Hopkins, Julianne Moore, Gary Oldman",
+      "director": "Ridley Scott",
+      "genre": "Crime, Drama, Thriller",
+      "plot": "Living in exile, Dr. Hannibal Lecter tries to reconnect with now disgraced F.B.I. Agent Clarice Starling, and finds himself a target for revenge from a powerful victim.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDMxMjhiZmItNWMxMC00NzYyLWJiOTYtNGYwOTAyYjU5OWY4XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "year": "2001",
+      "id": 30
+    },
+    {
+      "title": "El infierno",
+      "rating": "5",
+      "actors": "Damián Alcázar, Joaquín Cosio, Ernesto Gómez Cruz",
+      "director": "Luis Estrada",
+      "genre": "Action, Comedy, Crime",
+      "plot": "El Benny is deported from the U.S. and returns home to a Mexico devastated by the drug wars. He too joins in, and starts climbing the hierarchy, finding a prosperous life, full of money, women, violence and fun.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDdmYzAyMDAtY2EzNS00YTRlLWFjNWUtYmM4NGYxMjE2ZmM1XkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_SX300.jpg",
+      "year": "2010",
+      "id": 31
+    },
+    {
+      "title": "The Godfather: Part 2",
+      "rating": "",
+      "actors": "Ahmed Abdelaziz",
+      "director": "N/A",
+      "genre": "Action, Drama, Thriller",
+      "plot": "N/A",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYmFmM2Q5MDAtOWRkZi00MTdkLWJkZjMtMjEwN2MyMDg3YTRmXkEyXkFqcGdeQXVyNDczNDk2OTI@._V1_SX300.jpg",
+      "year": "2018",
+      "id": 32
+    },
+    {
+      "title": "The Godfather: Part II",
+      "rating": "",
+      "actors": "Al Pacino, Robert Duvall, Diane Keaton, Robert De Niro",
+      "director": "Francis Ford Coppola",
+      "genre": "Crime, Drama",
+      "plot": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
+      "year": "1974",
+      "id": 33
+    },
+    {
+      "title": "The Godfather: Part III",
+      "rating": "",
+      "actors": "Al Pacino, Diane Keaton, Talia Shire, Andy Garcia",
+      "director": "Francis Ford Coppola",
+      "genre": "Crime, Drama",
+      "plot": "Follows Michael Corleone, now in his 60s, as he seeks to free his family from crime and find a suitable successor to his empire.",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWFlYWY2YjYtNjdhNi00MzVlLTg2MTMtMWExNzg4NmM5NmEzXkEyXkFqcGdeQXVyMDk5Mzc5MQ@@._V1_SX300.jpg",
+      "year": "1990",
+      "id": 34
+    }
+  ]
+}
