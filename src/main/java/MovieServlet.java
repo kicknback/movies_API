@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.Arrays;
 
 @WebServlet(name = "MovieServlet", urlPatterns = "/movies")
@@ -47,24 +48,17 @@ public class MovieServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("application/json");
         PrintWriter out = null;
+
+
         try {
             out = response.getWriter();
             Movie[] movies = new Gson().fromJson(request.getReader(), Movie[].class);
-            for (Movie movie : movies) {
-                System.out.println(movie.getId());
-                System.out.println(movie.getTitle());
-                System.out.println(movie.getDirector());
-                System.out.println(movie.getPlot());
-                System.out.println(movie.getPoster());
-                System.out.println(movie.getActors());
-                System.out.println(movie.getGenre());
-                System.out.println(movie.getYear());
-                System.out.println(movie.getRating());
-                System.out.println("========================================================");
-            }
-
+            DaoFactory.getMoviesDao(DaoFactory.ImplType.IN_MEMORY).insert(movies[0]);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            out.println(new Gson().toJson(e.getLocalizedMessage()));
+            response.setStatus(500);
+            e.printStackTrace();
+            return;
         }
         out.println(new Gson().toJson("{message: \"Movies POST was successful\"}"));
         response.setStatus(200);

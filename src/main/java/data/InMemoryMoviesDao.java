@@ -56,7 +56,7 @@ public class InMemoryMoviesDao implements MoviesDao {
 
     private HashMap<Integer, Movie> getMoviesMap() {
         try {
-            Reader reader = Files.newBufferedReader(Paths.get("movies.json"));
+            Reader reader = Files.newBufferedReader(Paths.get("/Users/joshuaborreli/IdeaProjects/movies_API/src/main/resources/movies.json"));
             Type type = TypeToken.getParameterized(ArrayList.class, Movie.class).getType();
             return getMovieMap(new Gson().fromJson(reader, type));
         } catch (IOException e) {
@@ -67,8 +67,10 @@ public class InMemoryMoviesDao implements MoviesDao {
 
     private HashMap<Integer, Movie> getMovieMap(List<Movie> movies) {
         HashMap<Integer, Movie> movieHashMap = new HashMap<>();
+        int count = 1;
         for (Movie movie : movies) {
-            movieHashMap.put(movie.getId(), movie);
+            movieHashMap.put(count, movie);
+            count++;
         }
         return movieHashMap;
     }

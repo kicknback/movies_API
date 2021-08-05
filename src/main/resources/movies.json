@@ -1,5 +1,4 @@
-{
-  "movies": [
+[
     {
       "id": 6,
       "poster": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
@@ -243,4 +242,3 @@
       "id": 34
     }
   ]
-}
