@@ -34,7 +34,7 @@ public class MovieServlet extends HttpServlet {
 //                    "1990"
 //            );
 
-            MoviesDao moviesDao = DaoFactory.getMoviesDao(DaoFactory.ImplType.IN_MEMORY);
+            MoviesDao moviesDao = DaoFactory.getMoviesDao(DaoFactory.ImplType.MYSQL);
 
 
             String movieString = new Gson().toJson(moviesDao.all());
@@ -52,7 +52,7 @@ public class MovieServlet extends HttpServlet {
         try {
             out = response.getWriter();
             Movie[] movies = new Gson().fromJson(request.getReader(), Movie[].class);
-            DaoFactory.getMoviesDao(DaoFactory.ImplType.IN_MEMORY).insert(movies[0]);
+            DaoFactory.getMoviesDao(DaoFactory.ImplType.MYSQL).insert(movies[0]);
         } catch (Exception e) {
             out.println(new Gson().toJson(e.getLocalizedMessage()));
             response.setStatus(500);
@@ -67,29 +67,11 @@ public class MovieServlet extends HttpServlet {
     protected void doPut(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("application/json");
         PrintWriter out = null;
-//        try {
-//            out = response.getWriter();
-//            Movie[] movies = new Gson().fromJson(request.getReader(), Movie[].class);
-//            for (Movie movie : movies) {
-//                System.out.println(movie.getId());
-//                System.out.println(movie.getTitle());
-//                System.out.println(movie.getDirector());
-//                System.out.println(movie.getPlot());
-//                System.out.println(movie.getPoster());
-//                System.out.println(movie.getActors());
-//                System.out.println(movie.getGenre());
-//                System.out.println(movie.getYear());
-//                System.out.println(movie.getRating());
-//                System.out.println("========================================================");
-//            }
-//
-//        } catch (Exception e) {
-//            System.out.println(e.getMessage());
-//        }
+
         try {
             out = response.getWriter();
             Movie movie = new Gson().fromJson(request.getReader(), Movie.class);
-            DaoFactory.getMoviesDao(DaoFactory.ImplType.IN_MEMORY).update(movie);
+            DaoFactory.getMoviesDao(DaoFactory.ImplType.MYSQL).update(movie);
         } catch (SQLException e) {
             out.println(new Gson().toJson(e.getLocalizedMessage()));
             response.setStatus(500);
@@ -121,7 +103,7 @@ public class MovieServlet extends HttpServlet {
         try {
             out = response.getWriter();
             var id = new Gson().fromJson(request.getReader(), int.class);
-            DaoFactory.getMoviesDao(DaoFactory.ImplType.IN_MEMORY).destroy(id);
+            DaoFactory.getMoviesDao(DaoFactory.ImplType.MYSQL).destroy(id);
         } catch (SQLException e) {
             out.println(new Gson().toJson(e.getLocalizedMessage()));
             response.setStatus(500);
