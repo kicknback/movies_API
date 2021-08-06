@@ -52,7 +52,7 @@ public class MovieServlet extends HttpServlet {
         try {
             out = response.getWriter();
             Movie[] movies = new Gson().fromJson(request.getReader(), Movie[].class);
-            DaoFactory.getMoviesDao(DaoFactory.ImplType.MYSQL).insert(movies[0]);
+            DaoFactory.getMoviesDao(DaoFactory.ImplType.MYSQL).insertAll(movies);
         } catch (Exception e) {
             out.println(new Gson().toJson(e.getLocalizedMessage()));
             response.setStatus(500);
