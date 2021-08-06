@@ -16,7 +16,7 @@ public class DaoFactory {
     public static MoviesDao getMoviesDao(ImplType implementationType) {
 
         switch (implementationType) {
-            case IN_MEMORY: { //yet we have one switch case. We'll get to that!
+            case IN_MEMORY: {               //yet we have one switch case. We'll get to that!
                 if (moviesDao == null) {
                     moviesDao = new InMemoryMoviesDao();
                 }

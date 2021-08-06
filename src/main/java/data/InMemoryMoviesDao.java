@@ -70,6 +70,7 @@ public class InMemoryMoviesDao implements MoviesDao {
         int count = 1;
         for (Movie movie : movies) {
             movieHashMap.put(count, movie);
+            movie.setId(count);
             count++;
         }
         return movieHashMap;
