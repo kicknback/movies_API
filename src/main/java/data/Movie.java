@@ -1,6 +1,7 @@
 package data;
 
 public class Movie {
+
     private int id;
     private String poster;
     private String title;
@@ -99,4 +100,5 @@ public class Movie {
     public void setYear(String year) {
         this.year = year;
     }
+
 }

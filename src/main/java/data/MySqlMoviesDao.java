@@ -2,6 +2,7 @@ package data;
 
 import com.mysql.cj.jdbc.Driver;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MySqlMoviesDao implements MoviesDao{
@@ -20,8 +21,27 @@ public class MySqlMoviesDao implements MoviesDao{
 
     @Override
     public List<Movie> all() throws SQLException {
-        return null;
+        Statement statement = connection.createStatement();
+        ResultSet rs = statement.executeQuery("SELECT * FROM movies");
+        List<Movie> movies = new ArrayList<>();
+
+        while (rs.next()) {
+            movies.add(new Movie(
+                rs.getInt("id"),
+                rs.getString("title"),
+                rs.getString("rating"),
+                rs.getString("actors"),
+                rs.getString("director"),
+                rs.getString("genre"),
+                rs.getString("plot"),
+                rs.getString("poster"),
+                rs.getString("year")
+            ));
+        }
+
+        return movies;
     }
+
 
     @Override
     public Movie findOne(int id) {
@@ -29,7 +49,31 @@ public class MySqlMoviesDao implements MoviesDao{
     }
 
     @Override
-    public void insert(Movie movie) {
+    public void insert(Movie movie) throws SQLException {
+
+        // Remove id for insertion??
+
+        // Build sql template
+        StringBuilder sql = new StringBuilder("INSERT INTO movies (" +
+                "title, rating, actors, director, genre, plot, poster, year) " +
+                "VALUES ");
+
+        // Add an interpolation template for each element in movies list
+        sql.append("(?, ?, ?, ?, ?, ?, ?, ?)");
+
+        // Use the sql string to create a prepared statement
+        PreparedStatement statement = connection.prepareStatement(sql.toString());
+
+        statement.setString(1, movie.getTitle());
+        statement.setString(2, movie.getRating());
+        statement.setString(3, movie.getActors());
+        statement.setString(4, movie.getDirector());
+        statement.setString(5, movie.getGenre());
+        statement.setString(6, movie.getPlot());
+        statement.setString(7, movie.getPoster());
+        statement.setString(8, movie.getYear());
+
+        statement.executeUpdate();
 
     }
 
@@ -42,7 +86,7 @@ public class MySqlMoviesDao implements MoviesDao{
                 "VALUES ");
 
 
-        // Add a interpolation template for each element in movies list
+        // Add an interpolation template for each element in movies list
         sql.append("(?, ?, ?, ?, ?, ?, ?, ?, ?), ".repeat(movies.length));
 
         // Create a new String and take off the last comma and whitespace
@@ -70,23 +114,47 @@ public class MySqlMoviesDao implements MoviesDao{
         statement.executeUpdate();
     }
 
-        //    id       INT AUTO_INCREMENT,
-        //    title    VARCHAR(75)  NOT NULL,
-        //    rating   CHAR,
-        //    actors   TEXT         NOT NULL,
-        //    director VARCHAR(50)  NOT NULL,
-        //    genre    VARCHAR(255) NOT NULL,
-        //    plot     TEXT         NOT NULL,
-        //    poster   TEXT,
-        //    year     VARCHAR(4)          NOT NULL
-
     @Override
     public void update(Movie movie) throws SQLException {
+
+        String sql = "UPDATE movies" +
+                "SET title = ?," +
+                "SET rating = ?" +
+                "SET actors = ?" +
+                "SET director = ?" +
+                "SET genre = ?" +
+                "SET plot = ?" +
+                "SET poster = ?" +
+                "SET year = ?" +
+                "WHERE id = ?";
+
+        PreparedStatement statement = connection.prepareStatement(sql.toString());
+
+        statement.setString(1, movie.getTitle());
+        statement.setString(2, movie.getRating());
+        statement.setString(3, movie.getActors());
+        statement.setString(4, movie.getDirector());
+        statement.setString(5, movie.getGenre());
+        statement.setString(6, movie.getPlot());
+        statement.setString(7, movie.getPoster());
+        statement.setString(8, movie.getYear());
+        statement.setInt(9, movie.getId());
+
+        statement.executeUpdate();
 
     }
 
     @Override
     public void destroy(int id) throws SQLException {
 
+        String sql =
+                "DELETE FROM movies " +
+                        "WHERE id = ?";
+
+        PreparedStatement statement = connection.prepareStatement(sql);
+
+        statement.setInt(1, id);
+
+        statement.execute();
     }
 }
