@@ -117,15 +117,15 @@ public class MySqlMoviesDao implements MoviesDao{
     @Override
     public void update(Movie movie) throws SQLException {
 
-        String sql = "UPDATE movies" +
+        String sql = "UPDATE movies " +
                 "SET title = ?," +
-                "SET rating = ?" +
-                "SET actors = ?" +
-                "SET director = ?" +
-                "SET genre = ?" +
-                "SET plot = ?" +
-                "SET poster = ?" +
-                "SET year = ?" +
+                "rating = ?," +
+                "actors = ?," +
+                "director = ?," +
+                "genre = ?," +
+                "plot = ?," +
+                "poster = ?," +
+                "year = ? " +
                 "WHERE id = ?";
 
         PreparedStatement statement = connection.prepareStatement(sql.toString());
