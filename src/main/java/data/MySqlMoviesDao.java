@@ -123,7 +123,7 @@ public class MySqlMoviesDao implements MoviesDao{
                 "year = ? " +
                 "WHERE id = ?";
 
-        PreparedStatement statement = connection.prepareStatement(sql.toString());
+        PreparedStatement statement = connection.prepareStatement(sql);
 
         statement.setString(1, movie.getTitle());
         statement.setString(2, movie.getRating());
