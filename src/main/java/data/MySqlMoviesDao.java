@@ -51,18 +51,13 @@ public class MySqlMoviesDao implements MoviesDao{
     @Override
     public void insert(Movie movie) throws SQLException {
 
-        // Remove id for insertion??
-
-        // Build sql template
-        StringBuilder sql = new StringBuilder("INSERT INTO movies (" +
-                "title, rating, actors, director, genre, plot, poster, year) " +
-                "VALUES ");
-
         // Add an interpolation template for each element in movies list
-        sql.append("(?, ?, ?, ?, ?, ?, ?, ?)");
+        String sql = "INSERT INTO movies (" +
+                "title, rating, actors, director, genre, plot, poster, year) " +
+                "VALUES " + "(?, ?, ?, ?, ?, ?, ?, ?)";
 
         // Use the sql string to create a prepared statement
-        PreparedStatement statement = connection.prepareStatement(sql.toString());
+        PreparedStatement statement = connection.prepareStatement(sql);
 
         statement.setString(1, movie.getTitle());
         statement.setString(2, movie.getRating());

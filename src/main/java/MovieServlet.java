@@ -51,8 +51,11 @@ public class MovieServlet extends HttpServlet {
 
         try {
             out = response.getWriter();
-            Movie[] movies = new Gson().fromJson(request.getReader(), Movie[].class);
-            DaoFactory.getMoviesDao(DaoFactory.ImplType.MYSQL).insertAll(movies);
+//            Movie[] movies = new Gson().fromJson(request.getReader(), Movie[].class);
+//            DaoFactory.getMoviesDao(DaoFactory.ImplType.MYSQL).insertAll(movies);
+            // Reformatted to insert one movie at a time
+            Movie movie = new Gson().fromJson(request.getReader(), Movie.class);
+            DaoFactory.getMoviesDao(DaoFactory.ImplType.MYSQL).insert(movie);
         } catch (Exception e) {
             out.println(new Gson().toJson(e.getLocalizedMessage()));
             response.setStatus(500);
