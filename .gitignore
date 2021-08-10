@@ -56,6 +56,8 @@ cmake-build-*/
 
 # IntelliJ
 out/
+target/
+src/main/resources/curriculum/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -95,3 +97,4 @@ modules.xml
 .idea/sonarlint
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all
+
